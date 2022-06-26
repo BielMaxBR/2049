@@ -25,7 +25,7 @@ build: ${OBJ}
  
 ./objects/main.o: ./src/main.cpp
 	@ mkdir -p objects
-	-g++ -c $< -o $@
+	-g++ -c $< -o $@ $(CC_FLAGS) -I ./include
 
 test:
 	g++ -c src/main.cpp -o objects/main.o
